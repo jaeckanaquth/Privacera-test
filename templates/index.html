@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GenAI Translation and Grammar Correction</title>
+</head>
+<body>
+    <h1>GenAI Translation Application</h1>
+    <form id="input-form">
+        <textarea name="user_input" rows="5" cols="40" placeholder="Enter text to translate..."></textarea><br>
+        <button type="submit">Translate</button>
+    </form>
+    <div id="response">
+        <h2>Translation:</h2>
+        <p id="translation-output"></p>
+        <h2>Corrected Translation:</h2>
+        <p id="correction-output"></p>
+    </div>
+
+    <script>
+        document.getElementById('input-form').onsubmit = function(event) {
+            event.preventDefault();
+            let formData = new FormData(this);
+            
+            fetch('/translate', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('translation-output').innerText = data.translated;
+                document.getElementById('correction-output').innerText = data.corrected;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
+templates/index.html
