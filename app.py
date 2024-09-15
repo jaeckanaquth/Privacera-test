@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Load the translation and grammar correction models
 translator = pipeline("translation_en_to_fr", model="Helsinki-NLP/opus-mt-en-fr")  # English to French translation model
-grammar_corrector = pipeline("text2text-generation", model="t5-base", task="grammar-correction")  # Grammar correction
+grammar_corrector = pipeline("text2text-generation", model="t5-base")  # Grammar correction
 
 @app.route('/')
 def home():

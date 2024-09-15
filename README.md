@@ -16,8 +16,8 @@ This application demonstrates the capabilities of a Generative AI Large Language
 ## Setup and Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/genai-translation-app.git
-    cd genai-translation-app
+    git clone https://github.com/jaeckanaquth/Privacera-test.git
+    cd Privacera-test
     ```
 
 2. Install the required dependencies:
@@ -31,6 +31,10 @@ This application demonstrates the capabilities of a Generative AI Large Language
     ```
 
 4. Open your browser and navigate to `http://127.0.0.1:5000/` to interact with the application.
+
+![](images/image.png)
+
+![](images/terminal.png)
 
 ## Usage
 - Enter the text you want to translate in the text box and click 'Translate'.
